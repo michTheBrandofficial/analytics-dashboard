@@ -1,0 +1,38 @@
+{
+  "name": "geegpay",
+  "version": "1.0.0",
+  "description": "An analytics dashboard built with NixixJS and SCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michTheBrandofficial/analytics-dashboard.git"
+  },
+  "keywords": [
+    "geegpay",
+    "nixixjs",
+    "scss",
+    "anaalytics",
+    "dashboard"
+  ],
+  "author": "michthebrand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michTheBrandofficial/analytics-dashboard/issues"
+  },
+  "homepage": "https://github.com/michTheBrandofficial/analytics-dashboard#readme",
+  "dependencies": {
+    "nixix": "latest"
+  },
+  "type": "module",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1"
+  }
+}

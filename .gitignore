@@ -1,0 +1,7 @@
+node_modules/
+dist/
+firebase.json
+.firebaserc
+figma/
+*.ps1 
+*.sh

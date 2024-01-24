@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "jsx": "react-jsxdev",
+    "jsxImportSource": "nixix/types",
+    "module": "es2022",
+    "target": "es2022",
+    "strict": true,
+    "types": [
+      "nixix/router",
+      "nixix/dom",
+      "nixix/primitives",
+      "nixix/hoc",
+      "nixix/view-components"
+    ],
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+  }
+}
