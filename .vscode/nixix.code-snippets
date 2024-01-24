@@ -122,5 +122,15 @@
     "body": "<Show when={${1:signal}} fallback={${2:fallback}}>\n\t<div />\n</Show>",
     "scope": "typescriptreact,javascriptreact",
     "description": "Show Component"
+  },
+
+  // json 
+  "prop": {
+    "prefix": "prop",
+    "body": "\"${1:name}\": \"${TM_SELECTED_TEXT}\","
+  },
+  "geegid": {
+    "prefix": "geeg",
+    "body": "\"id-geeg${1:num}ad\": {\n\t$2\n}$0"
   }
 }

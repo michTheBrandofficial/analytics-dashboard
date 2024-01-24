@@ -17,12 +17,15 @@ export default {
       borderColor: {
         'border_1': "#EBECF2",
         'border_2': "#EDF2F7",
-        'border_3': "#DADDDD"
+        'border_3': "#DADDDD",
+        'border_4': "#EDF2F6"
       },
       textColor: {
         'text_1': "#26282C",
         'text_2': "#787486",
-        'text_3': "#26282C"
+        'text_3': "#26282C",
+        'text_4': "#34CAA5",
+        'text_5': "#9CA4AB"
       }
     },
   },
