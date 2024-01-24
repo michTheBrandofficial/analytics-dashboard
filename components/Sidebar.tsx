@@ -4,7 +4,7 @@ import { For } from "nixix/hoc";
 
 const Sidebar = (): someView => {
   return (
-    <VStack className='w-fit h-full bg-bg-1 border-2 border-border-1 py-3 column gap-3'>
+    <VStack className='w-fit h-full bg-bg_1 border-r-2 border-border_1 py-3 column gap-3'>
       <div className='w-full h-fit px-4'>
         <img
           src={"/images/logo.svg"}

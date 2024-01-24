@@ -7,12 +7,22 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "Jakarta_Sans": ["Jakarta Sans", "sans-serif"],
+        "Inter": ["Inter", "sans-serif"]
+      },
       backgroundColor: {
-        'bg-1': "#F7F8FA",
+        'bg_1': "#F7F8FA",
       },
       borderColor: {
-        'border-1': "#EBECF2",
-        'border-2': "#EDF2F7"
+        'border_1': "#EBECF2",
+        'border_2': "#EDF2F7",
+        'border_3': "#DADDDD"
+      },
+      textColor: {
+        'text_1': "#26282C",
+        'text_2': "#787486",
+        'text_3': "#26282C"
       }
     },
   },
