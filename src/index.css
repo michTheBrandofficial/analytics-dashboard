@@ -22,4 +22,12 @@
     @apply w-fit h-fit
   }
 
+  .no-divider > .divider {
+    @apply hidden;
+  }
+
+  .geeg-grid-cols-5 {
+    grid-template-columns: 2fr 1fr 1fr 1fr 0fr;
+  }
+
 }

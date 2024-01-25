@@ -127,10 +127,19 @@
   // json 
   "prop": {
     "prefix": "prop",
-    "body": "\"${1:name}\": \"${TM_SELECTED_TEXT}\","
+    "body": "\"${1:name}\": \"${TM_SELECTED_TEXT}\"",
+    "scope": "json"
   },
   "geegid": {
     "prefix": "geeg",
-    "body": "\"id-geeg${1:num}ad\": {\n\t$2\n}$0"
+    "body": "\"id-geeg${1:num}ad\": {\n\t$2\n}$0",
+    "scope": "json"
+  },
+
+  // css
+  "newColor": {
+    "prefix": "newcolor",
+    "body": "'${1:type}_${2:num}': '${TM_SELECTED_TEXT}',$0",
+    "scope": "javascript"
   }
 }

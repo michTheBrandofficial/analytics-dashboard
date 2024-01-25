@@ -25,7 +25,11 @@ export default {
         'text_2': "#787486",
         'text_3': "#26282C",
         'text_4': "#34CAA5",
-        'text_5': "#9CA4AB"
+        'text_5': "#9CA4AB",
+        'text_6': '#3A3F51',
+        'text_7': '#737373',
+        'text_8': '#0D062D',
+        'text_9': '#ED544E',
       }
     },
   },

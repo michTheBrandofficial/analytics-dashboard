@@ -5,7 +5,9 @@ import './index.css';
 /* @module-refresh */
 const root = document.querySelector('body');
 const Mount = () => {
-	render(() => <View />,root!);
+	render(() => <View />,root!, {
+		commentForLF: false
+	});
 };
 
 Mount();

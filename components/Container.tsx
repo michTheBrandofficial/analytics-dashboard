@@ -6,7 +6,7 @@ const Container = (): someView => {
   return (
     <VStack className="flex-grow h-full bg-white column" >
       <Header />
-      <VStack className="w-full flex-grow bg-white grid grid-cols-2 p-3 gap-3" >
+      <VStack className="w-full flex-grow bg-white grid grid-cols-2 p-4 gap-4" >
         <LastOrders />
       </VStack>
     </VStack>
