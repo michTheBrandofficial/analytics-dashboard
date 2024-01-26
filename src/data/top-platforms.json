@@ -1,0 +1,26 @@
+{
+  "id-geeg1ad": {
+    "name": "Book Bazaar",
+    "lastPercentage": 35,
+    "currentPercentage": 50,
+    "price": 2500000
+  },
+  "id-geeg2ad": {
+    "name": "Artisan Aisle",
+    "lastPercentage": 30,
+    "currentPercentage": 40,
+    "price": 1800000
+  },
+  "id-geeg3ad": {
+    "name": "Toy Troop",
+    "lastPercentage": 20,
+    "currentPercentage": 28,
+    "price": 1200000
+  },
+  "id-geeg4ad": {
+    "name": "XStore",
+    "lastPercentage": 20,
+    "currentPercentage": 28,
+    "price": 600000
+  }
+}

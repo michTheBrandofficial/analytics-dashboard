@@ -132,7 +132,7 @@
   },
   "geegid": {
     "prefix": "geeg",
-    "body": "\"id-geeg${1:num}ad\": {\n\t$2\n}$0",
+    "body": "\"id-geeg${1:num}ad\": {\n\t\"name\": \"$2\",\n\t\"lastPercentage\": $3,\n\t\"currentPercentage\": $4,\n\t\"price\": $5\n}$0",
     "scope": "json"
   },
 

@@ -13,6 +13,11 @@ export default {
       },
       backgroundColor: {
         'bg_1': "#F7F8FA",
+        'gray': '#F5F5F5',
+        'purple': '#6160DC',
+        'blue': '#54C5EB',
+        'orange': '#FFB74A',
+        'red': '#FF4A55',
       },
       borderColor: {
         'border_1': "#EBECF2",
@@ -23,13 +28,14 @@ export default {
       textColor: {
         'text_1': "#26282C",
         'text_2': "#787486",
-        'text_3': "#26282C",
+        'text_3': '#22242C',
         'text_4': "#34CAA5",
         'text_5': "#9CA4AB",
         'text_6': '#3A3F51',
         'text_7': '#737373',
         'text_8': '#0D062D',
         'text_9': '#ED544E',
+        'text_10': '#525252',
       }
     },
   },

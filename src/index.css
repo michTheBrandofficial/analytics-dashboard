@@ -26,6 +26,10 @@
     @apply hidden;
   }
 
+  .geeg-grid-cols-2 {
+    grid-template-columns: 1.6fr 1fr;
+  }
+
   .geeg-grid-cols-5 {
     grid-template-columns: 2fr 1fr 1fr 1fr 0fr;
   }

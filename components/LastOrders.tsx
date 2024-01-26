@@ -1,9 +1,10 @@
 import { For } from "nixix/hoc";
 import { HStack, VStack } from "nixix/view-components";
 import Divider from "./Divider";
-import data from "@/public/data/last-orders.json";
+import data from "@/src/data/last-orders.json";
 import { entries } from "@/lib";
 import Order from "./Order";
+import Section from "./Section";
 
 const LastOrderTable = () => {
   const columns = ["Name", "Date", "Amount", "Status", "Invoice"];
@@ -22,7 +23,7 @@ const LastOrderTable = () => {
         <For each={entries(data)}>
           {([, item]) => {
             return (
-              <div className="fit w-full column gap-4 last:no-divider">
+              <div className='fit w-full column gap-4 last:no-divider'>
                 <Order {...item} />
                 <Divider />
               </div>
@@ -36,13 +37,13 @@ const LastOrderTable = () => {
 
 const LastOrders = (): someView => {
   return (
-    <VStack className='h-fit font-Jakarta_Sans font-semibold bg-white border border-border_1 rounded-xl p-4 pb-5 column gap-4'>
+    <Section.Bordered className='h-fit column gap-4'>
       <div className='w-full h-fit flex justify-between items-center'>
         <h1>Last Orders</h1>
         <h1 className='text-text_4'>See All</h1>
       </div>
       <LastOrderTable />
-    </VStack>
+    </Section.Bordered>
   );
 };
 

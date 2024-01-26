@@ -26,7 +26,7 @@ const Header = (): someView => {
               alt='Justin Bergson'
             />
             <div className='flex-grow h-fit font-Inter font-normal column items-end justify-between'>
-              <h1 className='text-text_3 text-sm'>Justin Bergson</h1>
+              <h1 className='text-text_1 text-sm'>Justin Bergson</h1>
               <p className='text-text_2 text-[12px]'>Justin@gmail.com</p>
             </div>
             <ChevronDown />
