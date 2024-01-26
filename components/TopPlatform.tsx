@@ -1,9 +1,9 @@
-import { entries, showIncrease } from "@/lib";
+import { entries, formatNum, showIncrease } from "@/lib";
 import Section from "./Section";
 import data from "@/src/data/top-platforms.json";
 import { For } from "nixix/hoc";
+import { HStack, VStack } from "nixix/view-components";
 
-type TPlatfromMetric = (typeof data)[Helpers.Keyof<typeof data>];
 
 const colors = ["bg-purple", "bg-blue", "bg-orange", "bg-red"];
 
@@ -11,8 +11,8 @@ const Platform = ({
   lastPercentage,
   currentPercentage,
   ...props
-}: TPlatfromMetric & { key?: number }) => {
-  const price = Intl.NumberFormat(undefined, { style: 'currency', currency: 'USD' }).format(props?.price)
+}: TPlatfrom & { key?: number }) => {
+  const price = formatNum(props?.price)
 
   return (
     <div className='w-full h-fit column gap-3'>
@@ -33,13 +33,13 @@ const Platform = ({
 
 const TopPlatform = (): someView => {
   return (
-    <Section className='column gap-4'>
-      <div className='w-full h-fit flex justify-between items-center'>
+    <Section className='column gap-4 p-4 pb-5 overflow-y-scroll no-scroll'>
+      <HStack className='w-full h-fit justify-between items-center'>
         <h1>Top Platform</h1>
         <h1 className='text-text_4'>See All</h1>
-      </div>
+      </HStack>
 
-      <section className='w-full flex-grow column gap-4 font-Jakarta_Sans'>
+      <VStack className='w-full flex-grow column gap-4 font-Jakarta_Sans'>
         <For each={entries(data)}>
           {([, platform], i) => {
             return (
@@ -49,7 +49,7 @@ const TopPlatform = (): someView => {
             );
           }}
         </For>
-      </section>
+      </VStack>
     </Section>
   );
 };

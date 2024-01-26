@@ -34,4 +34,12 @@
     grid-template-columns: 2fr 1fr 1fr 1fr 0fr;
   }
 
+  .geeg-grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, .7fr));
+  }
+
+  .no-scroll {
+    scrollbar-width: none;
+  }
+
 }

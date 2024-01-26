@@ -13,6 +13,8 @@ export default {
       },
       backgroundColor: {
         'bg_1': "#F7F8FA",
+        'bg_2': "#34CAA51F",
+        'bg_3': '#ED544E1F',
         'gray': '#F5F5F5',
         'purple': '#6160DC',
         'blue': '#54C5EB',
@@ -36,6 +38,7 @@ export default {
         'text_8': '#0D062D',
         'text_9': '#ED544E',
         'text_10': '#525252',
+        'text_11': '#898989',
       }
     },
   },

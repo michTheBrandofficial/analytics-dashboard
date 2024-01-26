@@ -18,7 +18,7 @@ const LastOrderTable = () => {
         </For>
       </HStack>
       <Divider />
-      <VStack className='w-full flex-grow column  font-Jakarta_Sans font-medium text-sm gap-4'>
+      <VStack className='w-full flex-grow column  font-Jakarta_Sans font-medium text-sm gap-4 '>
         {/* Order */}
         <For each={entries(data)}>
           {([, item]) => {
@@ -37,7 +37,7 @@ const LastOrderTable = () => {
 
 const LastOrders = (): someView => {
   return (
-    <Section.Bordered className='h-fit column gap-4'>
+    <Section.Bordered className='column gap-4 p-4 pb-5 overflow-y-scroll no-scroll'>
       <div className='w-full h-fit flex justify-between items-center'>
         <h1>Last Orders</h1>
         <h1 className='text-text_4'>See All</h1>

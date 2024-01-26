@@ -1,0 +1,22 @@
+{
+  "order": {
+    "increase": true,
+    "total": 350,
+    "percentage": 15.6
+  },
+  "refund": {
+    "increase": true,
+    "total": 270,
+    "percentage": 35
+  },
+  "sales": {
+    "increase": false,
+    "total": 1567,
+    "percentage": 45.9
+  },
+  "income": {
+    "increase": true,
+    "total": 350,
+    "percentage": 23.5
+  }
+}
