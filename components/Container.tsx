@@ -7,9 +7,9 @@ import Graphs from "./Graphs";
 
 const Container = (): someView => {
   return (
-    <VStack className="flex-grow h-full bg-white column" >
+    <VStack className="w-full h-full bg-white column lg:flex-grow lg:w-auto lg:h-full overflow-y-scroll no-scroll" >
       <Header />
-      <VStack className="w-full h-fit bg-white grid geeg-grid-cols-2 geeg-grid-rows-2 p-4 gap-4" >
+      <VStack className="w-full h-fit bg-white p-4 gap-4 column lg:grid lg:geeg-grid-cols-2 lg:geeg-grid-rows-2" >
         <Trends />
         <Graphs />
         <LastOrders />

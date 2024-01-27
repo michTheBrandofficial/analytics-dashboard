@@ -45,7 +45,7 @@ const Trends = (): someView => {
   const numbers: int[] = [50, 40, 30, 20, 10, 5, 0];
 
   return (
-    <Section.Bordered className='p-4 pb-5 grid geeg-grid-rows-0-1 gap-4 font-Jakarta_Sans'>
+    <Section.Bordered className='w-full p-4 pb-5 grid geeg-grid-rows-0-1 gap-4 font-Jakarta_Sans lg:w-auto'>
       <HStack className='w-full h-fit justify-between items-center'>
         <h1>Sales Trends</h1>
         <div className='fit flex gap-2 items-center text-text_6 text-sm'>

@@ -1,25 +1,26 @@
 import Capsule from "./Capsule";
-import { Calendar, ChevronDown, SolarBell } from "./Icons";
+import { Calendar, ChevronDown, SearchIcon, SolarBell } from "./Icons";
 import SearchBar from "./SearchBar";
 
 const Header = (): someView => {
   const baseSize = 30;
   return (
-    <header className='w-full h-[72px] px-4 bg-white border-b-2 border-border_1 flex items-center font-Jakarta_Sans font-semibold'>
+    <header className='w-screen min-h-[72px] px-4 bg-white border-b-2 border-border_1 flex items-center font-Jakarta_Sans sticky top-0 z-[25] font-semibold lg:w-full'>
       <h1 className='text-xl'>Dashboard</h1>
-      <section className='w-fit h-full ml-auto flex items-center gap-6'>
-        <SearchBar />
-        <div className='fit flex items-center gap-2 text-sm text-text_1 font-Inter font-medium'>
+      <section className='w-fit h-full ml-auto items-center gap-6 flex '>
+        <SearchIcon className={'lg:hidden'} />
+        <SearchBar className="hidden lg:flex lg:w-60 lg:max-w-none " />
+        <div className='fit items-center gap-2 text-sm text-text_1 font-Inter font-medium hidden lg:flex'>
           <Calendar />
           <p>November 15, 2023</p>
         </div>
 
-        <section className='fit h-full flex items-center gap-4'>
+        <section className='fit h-full items-center gap-4 flex'>
           <div className='fit p-2 border border-border_1 rounded-full'>
             <SolarBell />
           </div>
 
-          <Capsule.Bordered className='min-w-40 min-h-1/2  px-2 py-1 font-medium gap-2 '>
+          <Capsule.Bordered className='min-w-40 min-h-1/2  px-2 py-1 font-medium gap-2 hidden lg:flex '>
             <img
               src='/images/justin.png'
               width={baseSize}

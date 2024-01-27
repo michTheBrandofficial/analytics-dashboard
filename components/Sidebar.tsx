@@ -3,6 +3,9 @@ import { SideBarIcons, ThemeIcons, ToolIcons } from "./Icons";
 import { For } from "nixix/hoc";
 import { concat, memo, store } from "nixix/primitives";
 
+/**
+ * @todo remove hidden class
+ */
 const Sidebar = (): someView => {
   const iconProps = {
     width: 24,
@@ -17,8 +20,8 @@ const Sidebar = (): someView => {
   }, [theme]);
 
   return (
-    <VStack className='w-fit h-full bg-bg_1 border-r-2 border-border_1 py-3 column gap-3'>
-      <div className='w-full h-fit px-4'>
+    <VStack className='w-fit h-screen bg-bg_1 border-r-2 border-border_1 pb-3 gap-3 fixed top-0 z-30  overflow-y-scroll hidden no-scroll lg:relative lg:h-full lg:column '>
+      <div className='w-full h-fit pt-3 px-4 sticky top-0 bg-white z-30'>
         <img
           src={"/images/logo.svg"}
           alt='Geegpay logo'
@@ -65,7 +68,7 @@ const Sidebar = (): someView => {
       </div>
 
       {/* Tools */}
-      <div className='mt-auto w-full h-fit column items-center justify-center bg-transparent gap-4'>
+      <div className='mt-auto w-full h-fit column items-center justify-center bg-transparent gap-4 '>
         <For each={ToolIcons}>
           {(Icon) => (
             <div className='w-fit h-fit cursor-pointer'>
