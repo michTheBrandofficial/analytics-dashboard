@@ -20,3 +20,17 @@ export function formatNum(value: any, fixed: number, currency?: 'USD') {
     value
   );
 }
+
+export function makeArray(length: int) {
+  return Array(length).fill('')
+}
+
+export function len(arr:any[]) {
+  return arr.length;
+}
+
+export function random<T>(arr: T[]) {
+  const item = arr[Math.floor(Math.random() * (len(arr) - 1))]
+  console.log(item);
+  return item;
+}

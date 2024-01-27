@@ -3,7 +3,7 @@ import Section from "./Section";
 import Capsule from "./Capsule";
 import { ChevronDown } from "./Icons";
 import { For } from "nixix/hoc";
-import { formatNum } from "@/lib";
+import { formatNum, makeArray, random } from "@/lib";
 import Months from "./Months";
 
 const DottedLines = ({ count }: { count?: number }) => {
@@ -19,10 +19,26 @@ const DottedLines = ({ count }: { count?: number }) => {
 };
 
 const Histogram = () => {
-  return <HStack className='full relative z-10 items-end justify-between '>
-    <div className="w-[22px] h-1/2 rounded-t-full bg-grad_10 " />
-    <div className="w-[22px] h-1/2 rounded-t-full bg-grad_10 " />
-  </HStack>;
+  const highestClass = "bg-gradient-to-b from-grad_1000 from-50% to-grad_0";
+  const lowClass = "bg-grad_10";
+  type THeight = "h-1/5" | "h-2/5" | "h-1/2" | "h-[60%]" | "h-4/5" | "";
+  const heights: THeight[] = ["h-1/2", "h-1/5", "h-2/5", "h-4/5", "h-[60%]"];
+
+  return (
+    <HStack className='full relative z-10 items-end justify-between '>
+      <For each={makeArray(12)}>
+        {(_, i) => {
+          const heightClass = random(heights);
+          const bgClass = heightClass === "h-4/5" ? highestClass : lowClass;
+          return (
+            <div
+              className={`w-[22px] h-1/5 rounded-t-full ${heightClass} ${bgClass}`}
+            />
+          );
+        }}
+      </For>
+    </HStack>
+  );
 };
 
 const Trends = (): someView => {
