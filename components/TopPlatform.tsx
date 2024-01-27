@@ -33,8 +33,8 @@ const Platform = ({
 
 const TopPlatform = (): someView => {
   return (
-    <Section className='column gap-4 p-4 pb-5 overflow-y-scroll no-scroll'>
-      <HStack className='w-full h-fit justify-between items-center'>
+    <Section className='column gap-4 px-4 pb-5 overflow-y-scroll no-scroll'>
+      <HStack className='w-full h-fit justify-between items-center sticky bg-inherit top-0 pt-4 '>
         <h1>Top Platform</h1>
         <h1 className='text-text_4'>See All</h1>
       </HStack>
