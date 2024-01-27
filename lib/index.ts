@@ -21,6 +21,12 @@ export function formatNum(value: any, fixed: number, currency?: 'USD') {
   );
 }
 
+export function delay(fn: CallableFunction) {
+  setTimeout(() => {
+    fn()
+  }, 200);
+}
+
 export function makeArray(length: int) {
   return Array(length).fill('')
 }

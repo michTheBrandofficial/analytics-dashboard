@@ -27,7 +27,7 @@ const Graph = (props?: TGraph & { name: KeyofGraphs }): someView => {
     return increase.value ? upClass : downClass;
   }, [increase]);
   return (
-    <Section.Bordered className='font-normal px-3 pt-2 pb-2 column justify-between text-text_11 '>
+    <Section.Bordered className='max-w-[320px] font-normal text-text_11 px-3 py-2 mr-auto even:ml-auto even:mr-0 column justify-between gap-2 bsm:mr-0 bsm:even:m-0  lg:gap-0 '>
       <HStack className='w-full h-fit items-center justify-between'>
         <div className='fit p-2 border border-border_1 rounded-full'>
           <Icon />

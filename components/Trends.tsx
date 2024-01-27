@@ -25,7 +25,7 @@ const Histogram = () => {
   const heights: THeight[] = ["h-1/2", "h-1/5", "h-2/5", "h-4/5", "h-[60%]"];
 
   return (
-    <HStack className='full relative z-10 items-end justify-between '>
+    <HStack className='full relative z-10 items-end justify-between gap-2 lg:gap-0 '>
       <For each={makeArray(12)}>
         {(_, i) => {
           const heightClass = random(heights);
@@ -45,7 +45,7 @@ const Trends = (): someView => {
   const numbers: int[] = [50, 40, 30, 20, 10, 5, 0];
 
   return (
-    <Section.Bordered className='w-full p-4 pb-5 grid geeg-grid-rows-0-1 gap-4 font-Jakarta_Sans lg:w-auto'>
+    <Section.Bordered className='w-full p-4 pb-5 column gap-4 font-Jakarta_Sans lg:w-auto lg:grid lg:geeg-grid-rows-0-1'>
       <HStack className='w-full h-fit justify-between items-center'>
         <h1>Sales Trends</h1>
         <div className='fit flex gap-2 items-center text-text_6 text-sm'>
@@ -57,20 +57,20 @@ const Trends = (): someView => {
         </div>
       </HStack>
       <HStack className='w-full flex gap-4 text-text_2'>
-        <VStack className='w-fit h-full pb-6 column justify-between text-sm '>
+        <VStack className='w-fit h-full pb-6 column gap-3 justify-between text-sm lg:gap-0 '>
           <For each={numbers}>
             {(item) => <p>{formatNum(item * 1000, 0)}</p>}
           </For>
         </VStack>
 
-        <VStack className='flex-grow overflow-scroll no-scroll  '>
-          <VStack className='h-full w-full column '>
-            <VStack className='w-full flex-grow relative '>
+        <VStack className='flex-grow overflow-scroll no-scroll '>
+          <VStack className='h-full w-fit column lg:w-full'>
+            <VStack className='w-full h-full relative lg:flex-grow'>
               <DottedLines />
               <Histogram />
             </VStack>
 
-            <HStack className='w-full min-h-6 pt-2 items-center justify-between text-sm mt-auto'>
+            <HStack className='w-full min-h-6 pt-2 items-center justify-between gap-10 text-sm mt-auto lg:gap-0'>
               <Months />
             </HStack>
           </VStack>

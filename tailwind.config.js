@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        bsm: {
+          min: '480px'
+        }
+      },
       fontFamily: {
         "Jakarta_Sans": ["Jakarta Sans", "sans-serif"],
         "Inter": ["Inter", "sans-serif"]

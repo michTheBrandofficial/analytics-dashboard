@@ -1,3 +1,4 @@
+import { concat } from "nixix/primitives";
 import { HStack, VStack } from "nixix/view-components";
 
 type SectionProps = Nixix.HTMLAttributes<HTMLElement> & {
@@ -7,7 +8,7 @@ type SectionProps = Nixix.HTMLAttributes<HTMLElement> & {
 const Bordered = ({flex, children, className: c, ...rest}: SectionProps): someView => {
   const props: SectionProps = {
     ...rest,
-    className: `font-Jakarta_Sans font-semibold rounded-xl bg-white border border-border_1 ` + c
+    className: concat`font-Jakarta_Sans font-semibold rounded-xl bg-white border border-border_1  ${c}` 
   };
   switch (flex) {
     case true: 
@@ -24,7 +25,7 @@ const Bordered = ({flex, children, className: c, ...rest}: SectionProps): someVi
 const Section = ({flex, children, className: c, ...rest}: SectionProps): someView => {
   const props: SectionProps = {
     ...rest,
-    className: `font-Jakarta_Sans font-semibold rounded-xl bg-white ` + c
+    className: concat`font-Jakarta_Sans font-semibold rounded-xl bg-white ${c} `
   };
   switch (flex) {
     case true: 
