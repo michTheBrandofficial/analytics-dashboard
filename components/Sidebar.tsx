@@ -1,8 +1,21 @@
 import { VStack } from "nixix/view-components";
 import { SideBarIcons, ThemeIcons, ToolIcons } from "./Icons";
 import { For } from "nixix/hoc";
+import { concat, memo, store } from "nixix/primitives";
 
 const Sidebar = (): someView => {
+  const iconProps = {
+    width: 24,
+    height: 24,
+    className: 'transition-all duration-700'
+  } as const;
+
+  const arr = ["white", "#b2abab"] as ("white" | "#b2abab")[];
+  const [theme, setTheme] = store<("white" | "#b2abab")[]>(arr);
+  const slideMemo = memo(() => {
+    return theme[0].value === "white" ? "translate-y-0" : "translate-y-[140%]";
+  }, [theme]);
+
   return (
     <VStack className='w-fit h-full bg-bg_1 border-r-2 border-border_1 py-3 column gap-3'>
       <div className='w-full h-fit px-4'>
@@ -21,18 +34,34 @@ const Sidebar = (): someView => {
             </div>
           )}
         </For>
-        <div className="w-1 h-6 rounded-s-full bg-black absolute top-2 right-0" />
+        <div className='w-1 h-6 rounded-s-full bg-black absolute top-2 right-0' />
       </div>
 
       {/* Theme */}
-      <div className='w-full h-fit column items-center justify-center bg-transparent gap-4'>
-        <For each={ThemeIcons}>
-          {(Icon) => (
-            <div className='w-fit h-fit cursor-pointer'>
-              <Icon />
-            </div>
-          )}
-        </For>
+      <div
+        className='w-full h-fit column items-center justify-center bg-transparent gap-4 relative'
+        on:click={() =>
+          setTheme(() => {
+            const reverse = arr.reverse();
+            return reverse;
+          })
+        }>
+        <div className='w-10 h-10 bg-transparent grid place-content-center cursor-pointer relative z-10'>
+          <ThemeIcons.Sun
+            {...iconProps}
+            fill={theme[0]}
+          />
+        </div>
+        <div className='w-10 h-10 bg-transparent grid place-content-center cursor-pointer relative z-10'>
+          <ThemeIcons.Moon
+            {...iconProps}
+            fill={theme[1]}
+          />
+        </div>
+
+        <div
+          className={concat`w-10 h-10 rounded-full bg-bg_4 absolute top-0 transition-all duration-700 ${slideMemo} z-0`}
+        />
       </div>
 
       {/* Tools */}

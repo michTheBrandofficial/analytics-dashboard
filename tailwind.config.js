@@ -20,6 +20,7 @@ export default {
         'bg_1': "#F7F8FA",
         'bg_2': "#34CAA51F",
         'bg_3': '#ED544E1F',
+        'bg_4': "#34CAA5",
         'gray': '#F5F5F5',
         'purple': '#6160DC',
         'blue': '#54C5EB',

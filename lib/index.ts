@@ -31,6 +31,5 @@ export function len(arr:any[]) {
 
 export function random<T>(arr: T[]) {
   const item = arr[Math.floor(Math.random() * (len(arr) - 1))]
-  console.log(item);
   return item;
 }
