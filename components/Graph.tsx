@@ -46,7 +46,7 @@ const Graph = (props?: TGraph & { name: KeyofGraphs }): someView => {
       <h1>{graphNames[props!.name]}</h1>
 
       <p className='text-lg text-text_1 '>
-        {props?.name === "income" ? formatNum(props?.total, 2, 'USD') : props?.total}
+        {props?.name === "income" ? formatNum(props?.total, 3, 'USD') : props?.total}
       </p>
 
       <Capsule className='w-full h-fit items-center justify-between text-sm'>

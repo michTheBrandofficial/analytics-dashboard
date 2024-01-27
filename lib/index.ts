@@ -16,7 +16,7 @@ export function showIncrease(num: int) {
 export function formatNum(value: any, fixed: number, currency?: 'USD') {
   const config = currency ? { style: 'currency', currency } : { style: undefined }
 
-  return Intl.NumberFormat(undefined, { ...config, maximumFractionDigits: fixed }).format(
+  return Intl.NumberFormat(undefined, { ...config, minimumFractionDigits: fixed }).format(
     value
   );
 }
