@@ -11,6 +11,11 @@ export default {
         "Jakarta_Sans": ["Jakarta Sans", "sans-serif"],
         "Inter": ["Inter", "sans-serif"]
       },
+      colors: {
+        grad_1000: "#34CAA5",
+        grad_10: "#34CAA51A",
+        grad_0: "#34CAA500"
+      },
       backgroundColor: {
         'bg_1': "#F7F8FA",
         'bg_2': "#34CAA51F",

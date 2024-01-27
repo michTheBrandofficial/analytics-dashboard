@@ -2,35 +2,35 @@
   "id-geeg1ad": {
     "name": "Marcus Bergson",
     "date": "Nov 15 2023",
-    "amount": "80,000",
+    "amount": 80000,
     "status": "Paid",
     "pfp": "/images/frame-1.png"
   },
   "id-geeg2ad": {
     "name": "Jaydon Vaccaro",
     "date": "Nov 15, 2023",
-    "amount": "$150,000",
+    "amount": 150000,
     "status": "Refund",
     "pfp": "/images/frame-2.png"
   },
   "id-geeg3ad": {
     "name": "Corey Schleifer",
     "date": "Nov 14, 2023",
-    "amount": "$87,000",
+    "amount": 87000,
     "status": "Paid",
     "pfp": "/images/frame-3.png"
   },
   "id-geeg4ad": {
     "name": "Cooper Press",
     "date": "Nov 14, 2023",
-    "amount": "$100,000",
+    "amount": 100000,
     "status": "Refund",
     "pfp": "/images/frame-4.png"
   },
   "id-geeg5ad": {
     "name": "Phillip Lubin",
     "date": "Nov 13, 2023",
-    "amount": "$78,000",
+    "amount": 78000,
     "status": "Paid",
     "pfp": "/images/frame-5.png"
   }

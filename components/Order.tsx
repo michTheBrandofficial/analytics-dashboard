@@ -1,4 +1,4 @@
-import { has$ } from "@/lib";
+import { formatNum } from "@/lib";
 import { DocDownload } from "./Icons";
 
 const Order = (props: TOrder): someView => {
@@ -14,7 +14,7 @@ const Order = (props: TOrder): someView => {
         <p className='text-text_6'>{props.name}</p>
       </div>
       <p className='text-text_7'>{props.date}</p>
-      <p className='text-text_8'>{has$(props.amount)}</p>
+      <p className='text-text_8'>{formatNum(props.amount, 0, "USD")}</p>
       <p className={props.status === "Paid" ? "text-text_4" : "text-text_9"}>
         {props.status}
       </p>

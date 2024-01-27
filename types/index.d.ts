@@ -6,8 +6,8 @@ export {};
 
 declare global {
   // types
-  interface int extends Number {}
-  interface str extends String {}
+  type int = number;
+  type str = string;
 
   type TOrder = (typeof orders)["id-geeg1ad"];
 

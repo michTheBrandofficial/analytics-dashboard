@@ -12,7 +12,7 @@ const Platform = ({
   currentPercentage,
   ...props
 }: TPlatfrom & { key?: number }) => {
-  const price = formatNum(props?.price)
+  const price = formatNum(props?.price, 2, 'USD')
 
   return (
     <div className='w-full h-fit column gap-3'>

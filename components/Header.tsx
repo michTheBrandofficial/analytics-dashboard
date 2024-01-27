@@ -1,3 +1,4 @@
+import Capsule from "./Capsule";
 import { Calendar, ChevronDown, SolarBell } from "./Icons";
 import SearchBar from "./SearchBar";
 
@@ -18,7 +19,7 @@ const Header = (): someView => {
             <SolarBell />
           </div>
 
-          <div className='min-w-40 min-h-1/2 rounded-full border border-border_1 px-2 py-1 font-medium flex items-center gap-2 '>
+          <Capsule.Bordered className='min-w-40 min-h-1/2  px-2 py-1 font-medium gap-2 '>
             <img
               src='/images/justin.png'
               width={baseSize}
@@ -30,7 +31,7 @@ const Header = (): someView => {
               <p className='text-text_2 text-[12px]'>Justin@gmail.com</p>
             </div>
             <ChevronDown />
-          </div>
+          </Capsule.Bordered>
         </section>
       </section>
     </header>

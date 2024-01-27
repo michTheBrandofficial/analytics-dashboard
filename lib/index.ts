@@ -13,8 +13,10 @@ export function showIncrease(num: int) {
   return str.startsWith("-") ? str : str.startsWith("+") ? str : `+${str}`;
 }
 
-export function formatNum(value: any, currency = "USD") {
-  return Intl.NumberFormat(undefined, { style: "currency", currency }).format(
+export function formatNum(value: any, fixed: number, currency?: 'USD') {
+  const config = currency ? { style: 'currency', currency } : { style: undefined }
+
+  return Intl.NumberFormat(undefined, { ...config, maximumFractionDigits: fixed }).format(
     value
   );
 }

@@ -1,9 +1,9 @@
-@tailwind base; 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Jakarta Sans';
+  font-family: "Jakarta Sans";
   src: url(/fonts/PlusJakartaSans-VariableFont_wght.ttf);
 }
 
@@ -13,13 +13,16 @@
 }
 
 @layer components {
-
   .column {
-    @apply flex flex-col
+    @apply flex flex-col;
   }
 
   .fit {
-    @apply w-fit h-fit
+    @apply w-fit h-fit;
+  }
+
+  .full {
+    @apply w-full h-full;
   }
 
   .no-divider > .divider {
@@ -35,11 +38,19 @@
   }
 
   .geeg-grid-rows-2 {
-    grid-template-rows: repeat(2, minmax(0, .7fr));
+    grid-template-rows: repeat(2, minmax(0, 0.7fr));
+  }
+
+  .geeg-grid-rows-0-1 {
+    grid-template-rows: 0fr 1fr;
   }
 
   .no-scroll {
     scrollbar-width: none;
   }
+  
 
+  .dotted-border {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='rgb(234,234,234)' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
 }
