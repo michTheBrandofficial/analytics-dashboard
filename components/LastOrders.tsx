@@ -10,7 +10,7 @@ const LastOrderTable = () => {
   const columns = ["Name", "Date", "Amount", "Status", "Invoice"];
   return (
     <VStack className='flex-grow overflow-x-auto no-scroll'>
-      <VStack className="h-full w-[210%] column gap-4 bsm:w-[150%] sm:w-full">
+      <VStack className="h-full w-[210%] column gap-4 bsm:w-[150%] sm:bsm:w-full">
         <HStack className='w-full h-fit pr-4 justify-between text-text_5 text-sm grid geeg-grid-cols-5 sm:w-full'>
           <For each={columns}>
             {(column, i) => {
