@@ -38,7 +38,11 @@
   }
 
   .geeg-grid-rows-2 {
-    grid-template-rows: repeat(2, minmax(0, 0.7fr));
+    grid-template-rows: repeat(2, minmax(0, .7fr));
+  }
+
+  .geeg-grid-rows-2-1 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .geeg-grid-rows-0-1 {

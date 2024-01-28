@@ -11,12 +11,12 @@ const Order = (props: TOrder): someView => {
           width={"auto"}
           height={"auto"}
         />
-        <p className='text-text_6'>{props.name}</p>
+        <p className='min-w-fit text-text_6'>{props.name}</p>
       </div>
-      <p className='text-text_7'>{props.date}</p>
-      <p className='text-text_8'>{formatNum(props.amount, 0, "USD")}</p>
-      <p className={props.status === "Paid" ? "text-text_4" : "text-text_9"}>
-        {props.status}
+      <p className='min-w-fit text-text_7'>{props.date}</p>
+      <p className='min-w-fit text-text_8'>{formatNum(props.amount, 0, "USD")}</p>
+      <p className={`min-w-fit ${props.status === "Paid" ? "text-text_4" : "text-text_9"}`}>
+      {props.status}
       </p>
       <div className='fit flex gap-1 items-center text-sm text-text_8'>
         <DocDownload />

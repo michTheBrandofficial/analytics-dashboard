@@ -10,7 +10,8 @@ export default {
       screens: {
         bsm: {
           min: '480px'
-        }
+        },
+        xl: "1440px"
       },
       fontFamily: {
         "Jakarta_Sans": ["Jakarta Sans", "sans-serif"],
