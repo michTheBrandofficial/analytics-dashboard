@@ -1,3 +1,8 @@
 {
   "tailwindCSS.emmetCompletions": true,
+  "search.exclude": {
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+  "search.useIgnoreFiles": false
 }

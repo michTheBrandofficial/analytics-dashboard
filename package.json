@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/michTheBrandofficial/analytics-dashboard#readme",
   "dependencies": {
-    "nixix": "latest"
+    "nixix": "^2.1.1"
   },
   "type": "module",
   "devDependencies": {

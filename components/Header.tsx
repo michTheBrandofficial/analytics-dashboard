@@ -1,4 +1,4 @@
-import { callRef, callSignal, concat, memo, signal } from "nixix/primitives";
+import { callRef, concat, memo, signal } from "nixix/primitives";
 import Capsule from "./Capsule";
 import { Calendar, ChevronDown, SearchIcon, SolarBell } from "./Icons";
 import SearchBar from "./SearchBar";
@@ -21,8 +21,11 @@ const Header = (): someView => {
     window.innerWidth < 1024 && setDisplay(!display.value);
   };
 
-  const [menuDisplay, setMenuDisplay] = callSignal<"flex" | "hidden">("hidden");
-  const rotationMemo = memo(() => menuDisplay.value === 'flex' ? 'rotate-180' : 'rotate-0 ', [menuDisplay])
+  const [menuDisplay, setMenuDisplay] = signal<"flex" | "hidden">("hidden");
+  const rotationMemo = memo(
+    () => (menuDisplay.value === "flex" ? "rotate-180" : "rotate-0 "),
+    [menuDisplay]
+  );
   return (
     <header className='w-screen min-h-[72px] px-4 bg-white border-b-2 border-border_1 flex items-center font-Jakarta_Sans sticky top-0 z-[25] font-semibold lg:w-full'>
       <h1 className='text-xl'>Dashboard</h1>
@@ -63,14 +66,16 @@ const Header = (): someView => {
               <h1 className='text-text_1 text-sm'>Justin Bergson</h1>
               <p className='text-text_2 text-[12px]'>Justin@gmail.com</p>
             </div>
-            <ChevronDown className={concat`${rotationMemo} transition-all duration-500 hidden lg:block `} />
+            <ChevronDown
+              className={concat`${rotationMemo} transition-all duration-500 hidden lg:block `}
+            />
           </Capsule.Bordered>
 
           {/* menu */}
           <Section.Bordered
-            on:click={() => setMenuDisplay('hidden')}
+            on:click={() => setMenuDisplay("hidden")}
             className={concat`w-[160%] h-40 px-4 py-5 absolute z-40 top-14 right-0 ${menuDisplay} focus:text-red-300 lg:w-full lg:h-60`}>
-            <p on:click={() => setSidebarDisplay('column')} >Menu</p>
+            <p on:click={() => setSidebarDisplay("column")}>Menu</p>
           </Section.Bordered>
         </section>
       </section>

@@ -17,7 +17,7 @@
       "nixix/dom",
       "nixix/primitives",
       "nixix/hoc",
-      "nixix/view-components"
+      "nixix/view-components",
     ],
     "noEmit": true,
     "skipLibCheck": true,

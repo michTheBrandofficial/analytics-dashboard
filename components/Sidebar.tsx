@@ -15,8 +15,7 @@ const Sidebar = (): someView => {
     className: 'transition-all duration-700'
   } as const;
 
-  const arr = ["white", "#b2abab"] as ("white" | "#b2abab")[];
-  const [theme, setTheme] = store<("white" | "#b2abab")[]>(arr);
+  const [theme, setTheme] = store<("white" | "#b2abab")[]>(["white", "#b2abab"]);
   const slideMemo = memo(() => {
     return theme[0].value === "white" ? "translate-y-0" : "translate-y-[140%]";
   }, [theme]);
@@ -54,8 +53,8 @@ const Sidebar = (): someView => {
       <div
         className='w-full h-fit column items-center justify-center bg-transparent gap-4 relative'
         on:click={() =>
-          setTheme(() => {
-            const reverse = arr.reverse();
+          setTheme((prev) => {
+            const reverse = prev.reverse();
             return reverse;
           })
         }>
